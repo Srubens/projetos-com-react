@@ -1,0 +1,42 @@
+*{
+  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.main_body{
+  background: #473be8;
+  width: 100%;
+}
+
+img{
+  max-width: 100%;
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 30rem;
+}
+
+.main_box{
+  background: #ffffff;
+  padding: 1rem;
+  max-width: 450px;
+  width: 90vw;
+  margin:3rem 0;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 40%);
+  border-radius: 0.25rem;
+}
+
+.main_title h1{
+  font-size: 1.6rem;
+}
+
+.person{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: .75rem;
+  margin-bottom: 1.5rem;
+}
+.person h1{
+  font-size: 1.2rem;
+}
