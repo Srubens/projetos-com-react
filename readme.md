@@ -1,1 +1,1 @@
-# Projeto e Estudos com React
+# Projeto e Estudos com React JS
