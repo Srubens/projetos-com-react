@@ -8,10 +8,11 @@ const App = () =>{
   const [people, setPeople] = useState(listPeople)
 
   const handlerClick = () =>{
-    let newPeople = people.filter((person) =>{
-      setPeople(newPeople)
-      console.log('aqui',person)
-    })
+    setPeople([])
+    // let newPeople = people.filter((person) =>{
+    //   setPeople(newPeople)
+    //   console.log('aqui',person)
+    // })
   }
 
   return (
@@ -32,7 +33,7 @@ const App = () =>{
               }
               <div className="d-flex justify-content-center ">
 
-                <div className="col-8 btn btn-primary" onClick={() => setPeople([])}>Limpar tudo</div>
+                <div className="col-8 btn btn-primary" onClick={handlerClick}>Limpar tudo</div>
               </div>
 
             </div>
