@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Index = () =>{
+const Layout = ({children}) =>{
     return(
-        <div>
-            <div className="btn btn-primary">Aqui</div>
-        </div>
+        <React.Fragment>
+            {children}
+        </React.Fragment>
     )
 }
 
-export default Index
+export default Layout

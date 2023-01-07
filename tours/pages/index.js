@@ -1,11 +1,21 @@
 import React from 'react'
+import {data} from './data'
 
-const Layout = ({children}) =>{
+const Index = () =>{
     return(
-        <React.Fragment>
-            {children}
-        </React.Fragment>
+        <>
+            <main>
+                <div>
+                    <div className="d-flex">
+                        <h1>Locais turisticos para viagens pelo brasil</h1>
+                    </div>
+                    <div className="tours">
+                        {console.log(data)}
+                    </div>
+                </div>
+            </main>
+        </>
     )
 }
 
-export default Layout
+export default Index
