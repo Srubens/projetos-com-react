@@ -1,3 +1,33 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
 body{
     background: #f1f5f8;
+}
+
+img{
+    width: 23.125rem;
+    object-fit: cover;
+    height: 320px;
+}
+
+.tours{
+    background: #fff;
+    position: relative;
+    border-radius: 0.25rem;
+    margin:1rem 0;
+}
+
+.tour_sigle img{
+    display: block;
+    height: 20rem;
+    object-fit: cover;
+    border-top-right-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+}
+.tour-info{
+    padding: 1.2rem 2rem;
 }
