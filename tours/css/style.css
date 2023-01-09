@@ -14,11 +14,14 @@ img{
     height: 320px;
 }
 
-.tours{
+.tour_sigle{
+    -webkit-box-shadow: 5px 3px 5px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 3px 5px -4px rgba(0,0,0,0.75);
+    box-shadow: 5px 3px 5px -4px rgba(0,0,0,0.75);
+    width: 23rem;
     background: #fff;
-    position: relative;
     border-radius: 0.25rem;
-    margin:1rem 0;
+    margin:1rem;
 }
 
 .tour_sigle img{
@@ -28,6 +31,7 @@ img{
     border-top-right-radius: 0.25rem;
     border-top-left-radius: 0.25rem;
 }
+
 .tour-info{
-    padding: 1.2rem 2rem;
+    margin: 2rem;
 }
