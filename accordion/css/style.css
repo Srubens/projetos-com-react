@@ -1,0 +1,29 @@
+body{
+    background: #4b145b;
+}
+.main_box{
+    width: 78vw;
+    padding:2rem;
+    background: #fff;
+    border-radius: 0.25rem;
+    display: flex;
+    margin:0 auto;
+}
+
+.box_text{
+    background:#fff;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.mybtn{
+    width:32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
