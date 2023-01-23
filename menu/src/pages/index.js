@@ -1,20 +1,34 @@
 import React, {useState} from 'react'
 import {Categories, Menu} from './Components'
-import menu from './menu'
+import items from './menu'
+
+const allCategories = ['all', ...new Set(items.map((item) => item.category))]
+console.log(allCategories)
 
 const Index = () =>{
 
-    const [menuItems, setMenuItems] = useState(menu)
-    const [categories, setCategories] = useState([])
+    const [menuItems, setMenuItems] = useState(items)
+    const [categories, setCategories] = useState(allCategories)
+
+    const filterItems = (category) =>{
+        if( category === 'all' ){
+            setMenuItems(items)
+            return
+        }
+        const newMenu = items.filter((item) => item.category === category)
+        setMenuItems(newMenu)
+    }
 
     return(
         <main>
             <section className="menu section">
                 <div className="title">
                 <div className="container">
-                    <h2>Nosso Menu</h2>
-                    <Categories/>
-                    <Menu menu={menuItems} />
+                    <header className="text-center m-4">
+                        <h2>Nosso Menu</h2>
+                    </header>
+                    <Categories categories={categories} filterItems={filterItems} />
+                    <Menu items={menuItems} />
                 </div>
                 </div>
             </section>
