@@ -37,9 +37,25 @@ const App = () =>{
     )
   }
 
+  const { company, dates, duties, title } = jobs[value]
+
   return (
     <div>
-      ola mundo!
+      <div>
+        <h2>Experience</h2>
+      </div>
+      <article>
+        <h3>{title}</h3>
+        <h4>{company}</h4>
+        <p>{dates}</p>
+        {
+          duties.map((duty, index) =>{
+            return <div key={index} >
+              {duty}
+            </div>
+          })
+        }
+      </article>
     </div>
   )
 }
