@@ -38,11 +38,22 @@ const App = () =>{
   }
 
   const { company, dates, duties, title } = jobs[value]
-
+  /**
+   * COLOCAR NA CLASS DO BOTAO
+   * active = classe que vai esta ativa no css
+   * ${index === value && 'active'}
+   */
   return (
     <div>
       <div>
         <h2>Experience</h2>
+      </div>
+      <div>
+        {jobs.map((item, index)=>{
+          return <div key={item.id} onClick={() => setValue(index)} >
+            {item.company}
+          </div>
+        })}
       </div>
       <article>
         <h3>{title}</h3>
