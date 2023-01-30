@@ -3,7 +3,7 @@ import {Categories, Menu} from './Components'
 import items from './menu'
 
 const allCategories = ['all', ...new Set(items.map((item) => item.category))]
-console.log(allCategories)
+// console.log(allCategories)
 
 const Index = () =>{
 
