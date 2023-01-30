@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import { FaAngleDoubleRight } from 'react-icons/fa';
 
 /**
  * VAMOS ESTA USANDO A API DELE NESTE MOMENTO E DEPOIS CRIAREMOS A 
@@ -44,29 +45,34 @@ const App = () =>{
    * ${index === value && 'active'}
    */
   return (
-    <div>
-      <div>
-        <h2>Experience</h2>
+    <div className='container' >
+      <div className='text-center mt-4' >
+        <h2><ins>Experience</ins></h2>
       </div>
-      <div>
-        {jobs.map((item, index)=>{
-          return <div key={item.id} onClick={() => setValue(index)} >
-            {item.company}
-          </div>
-        })}
-      </div>
-      <article>
-        <h3>{title}</h3>
-        <h4>{company}</h4>
-        <p>{dates}</p>
-        {
-          duties.map((duty, index) =>{
-            return <div key={index} >
-              {duty}
+      <div className="d-flex justify-content-center mt-5 flex-column flex-md-row">
+        <div className='d-flex flex-md-column' >
+          {jobs.map((item, index)=>{
+            return <div key={item.id} className={`btn btn-outline-primary mx-3 m-3 ${index === value && 'active'}`} onClick={() => setValue(index)} >
+              {item.company}
             </div>
-          })
-        }
-      </article>
+          })}
+        </div>
+
+        <article>
+          <h3>{title}</h3>
+          <h4>{company}</h4>
+          <p>{dates}</p>
+          {
+            duties.map((duty, index) =>{
+              return( 
+                <div key={index} >
+                <FaAngleDoubleRight /> {duty}
+                </div>
+              )
+            })
+          }
+        </article>
+      </div>
     </div>
   )
 }
